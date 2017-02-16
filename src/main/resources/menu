@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu
+        xmlns="http://www.eatmeat.com"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.eatmeat.com scheme.xsd">
+
+
+    <subMenu name="Холодные закуски">
+        <dish id = "a">
+            <photo></photo>
+            <name>Ассорти рыбное</name>
+            <description>Слабосоленая форель, семга</description>
+            <portion>
+                <mass>100</mass>
+                <mass>20</mass>
+                <mass>15</mass>
+            </portion>
+            <price></price>
+        </dish>
+        
+        <dish id="b">
+            <photo></photo>
+            <name>Тарталетки с красной икрой</name>
+            <description>Тарталетки с красной икрой</description>
+            <portion>
+                <mass>60</mass>
+                <mass>50</mass>
+            </portion>
+            <price></price>
+        </dish>
+    </subMenu>
+    
+    <subMenu name="Горячие закуски">
+        <dish id="ba">
+            <photo></photo>
+            <name>Лобио с шампиньонами</name>
+            <description>Фасоль с шампиньонами и грецким орехом</description>
+            <portion>
+                <mass>150</mass>
+                <mass>5</mass>
+            </portion>
+            <price>105</price>
+        </dish>
+    </subMenu>
+    
+    <subMenu name="Завтраки">
+        <dish id="ca">
+            <photo></photo>
+            <name>Глазунья</name>
+            <description>2 яйца (на выбор: ветчина, сыр, помидоры</description>
+            <portion>
+                <mass>150</mass>
+            </portion>
+            <price></price>
+        </dish>
+
+        <dish id="cb">
+            <photo></photo>
+            <name>Омлет</name>
+            <description></description>
+            <portion>
+                <mass>100</mass>
+            </portion>
+            <price></price>
+        </dish>
+
+        <dish id="bc">
+            <photo></photo>
+            <name>Блинчики с мясом</name>
+            <description>Жареные блинчики с мясом</description>
+            <portion>
+                <mass>150</mass>
+            </portion>
+            <price></price>
+        </dish>
+    </subMenu>
+
+
+
+</menu>

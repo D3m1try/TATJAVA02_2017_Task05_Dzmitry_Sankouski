@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://www.eatmeat.com"
+            xmlns:tns="http://www.eatmeat.com"
+            elementFormDefault="qualified">
+
+    <xsd:element name="menu">
+
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name = "subMenu" type = "tns:subMenu" maxOccurs="unbounded"></xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:complexType name="subMenu" >
+        <xsd:sequence>
+            <xsd:element name="dish" type="tns:menuItem" maxOccurs="unbounded"></xsd:element>
+        </xsd:sequence>
+        <xsd:attribute name="name" use="required" type="xsd:string"/>
+    </xsd:complexType>
+
+    <xsd:complexType name="menuItem">
+        <xsd:sequence>
+            <xsd:element name="photo" type="xsd:anyURI"></xsd:element>
+            <xsd:element name="name" type="xsd:anyType"></xsd:element>
+            <xsd:element name="description" type="xsd:anyType"></xsd:element>
+            <xsd:element name="portion" type="tns:portion"></xsd:element>
+        <xsd:choice>
+            <xsd:element name="price" type = "tns:NullOrPosInteger" nillable = "true"></xsd:element>
+            <xsd:element name="permutation" type="tns:dishMorph"></xsd:element>
+        </xsd:choice>
+        </xsd:sequence>
+        <xsd:attribute name="id" use="required" type="xsd:ID"/>
+    </xsd:complexType>
+
+
+    <xsd:complexType name="portion">
+        <xsd:choice>
+            <xsd:element name = "mass" type = "xsd:positiveInteger" maxOccurs="unbounded"></xsd:element>
+            <xsd:element name = "count" type = "xsd:positiveInteger" maxOccurs="unbounded"></xsd:element>
+        </xsd:choice>
+    </xsd:complexType>
+
+    <xsd:complexType name = "dishMorph">
+        <xsd:sequence maxOccurs="unbounded">
+            <xsd:element name="description" type="xsd:string"></xsd:element>
+            <xsd:element name="price" type="xsd:string"></xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:simpleType name="NullOrPosInteger">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="\d*" />
+        </xsd:restriction>
+    </xsd:simpleType>
+
+</xsd:schema>
