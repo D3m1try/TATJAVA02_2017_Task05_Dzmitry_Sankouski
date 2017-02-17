@@ -13,6 +13,15 @@ public enum CommandName {
         }
 
     },
+    GETALL{
+        public final String USAGE = "[parser type]";
+
+        @Override
+        public String getUsage() {
+            return USAGE;
+        }
+
+    },
     FIND{
         public final String USAGE = "[book,disk or movie] [-p  for precise search] [field to search] [what to search]";
 

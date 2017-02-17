@@ -10,6 +10,7 @@
             <xsd:sequence>
                 <xsd:element name = "subMenu" type = "tns:subMenu" maxOccurs="unbounded"></xsd:element>
             </xsd:sequence>
+            <xsd:attribute name="name" use="required" type="xsd:string"/>
         </xsd:complexType>
     </xsd:element>
 
@@ -28,7 +29,7 @@
             <xsd:element name="portion" type="tns:portion"></xsd:element>
         <xsd:choice>
             <xsd:element name="price" type = "tns:NullOrPosInteger" nillable = "true"></xsd:element>
-            <xsd:element name="permutation" type="tns:dishMorph"></xsd:element>
+            <xsd:element name="morphs" type="tns:dishMorphs" ></xsd:element>
         </xsd:choice>
         </xsd:sequence>
         <xsd:attribute name="id" use="required" type="xsd:ID"/>
@@ -42,8 +43,15 @@
         </xsd:choice>
     </xsd:complexType>
 
-    <xsd:complexType name = "dishMorph">
+    <xsd:complexType name = "dishMorphs">
         <xsd:sequence maxOccurs="unbounded">
+            <xsd:element name="morph" type="tns:dishMorph"></xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+
+
+    <xsd:complexType name = "dishMorph">
+        <xsd:sequence maxOccurs="1">
             <xsd:element name="description" type="xsd:string"></xsd:element>
             <xsd:element name="price" type="xsd:string"></xsd:element>
         </xsd:sequence>

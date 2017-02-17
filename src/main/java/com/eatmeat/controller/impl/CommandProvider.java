@@ -13,6 +13,7 @@ final class CommandProvider {
     private final Map<CommandName, Command> repository = new HashMap<>();
     CommandProvider(){
         repository.put(CommandName.ADD, new Add());
+        repository.put(CommandName.GETALL, new GetAll());
         repository.put(CommandName.FIND, new Find());
         repository.put(CommandName.NON_EXISTING, new WrongRequest());
         repository.put(CommandName.EXIT, new Exit());
