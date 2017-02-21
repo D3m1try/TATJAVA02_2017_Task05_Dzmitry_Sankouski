@@ -1,7 +1,6 @@
 package com.eatmeat.dao;
 
 
-import com.eatmeat.bean.Dish;
 import com.eatmeat.bean.Menu;
 import com.eatmeat.dao.impl.DOMDAO;
 import com.eatmeat.dao.impl.SAXDAO;
@@ -15,8 +14,8 @@ public class DAOFactory {
 //TODO config for tuning parcers types
 
     private GenericDAO<Menu, String> dom = new DOMDAO();
-    private GenericDAO<Menu, String> stax = new SAXDAO();
-    private GenericDAO<Menu, String> sax = new StAXDAO();
+    private GenericDAO<Menu, String> sax = new SAXDAO();
+    private GenericDAO<Menu, String> stax = new StAXDAO();
 
 
     private DAOFactory() {
@@ -27,7 +26,7 @@ public class DAOFactory {
     }
 
     public GenericDAO<Menu, String> getDAO(){
-        return dom;
+        return stax;
     }
 
 }

@@ -61,13 +61,23 @@
                 </morph>
             </morphs>
         </dish>
+
+        <dish id="bc">
+            <photo></photo>
+            <name>Ахматар мясной</name>
+            <description>Колбаса, ветчина, буженина,сыр, запеченные на мангале в лаваше</description>
+            <portion>
+                <count>1</count>
+            </portion>
+            <price>150</price>
+        </dish>
     </subMenu>
     
     <subMenu name="Завтраки">
         <dish id="ca">
             <photo></photo>
             <name>Глазунья</name>
-            <description>2 яйца (на выбор: ветчина, сыр, помидоры</description>
+            <description>2 яйца (на выбор: ветчина, сыр, помидоры)</description>
             <portion>
                 <mass>150</mass>
             </portion>
@@ -84,7 +94,7 @@
             <price></price>
         </dish>
 
-        <dish id="bc">
+        <dish id="cc">
             <photo></photo>
             <name>Блинчики с мясом</name>
             <description>Жареные блинчики с мясом</description>
