@@ -14,6 +14,7 @@ import org.xml.sax.helpers.DefaultHandler;
 import org.xml.sax.helpers.XMLReaderFactory;
 
 import javax.measure.unit.SI;
+import javax.naming.OperationNotSupportedException;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URI;
@@ -29,7 +30,7 @@ import static com.eatmeat.dao.util.Util.tryParse;
 public class SAXDAO implements GenericDAO<Menu, String> {
 
     public String create(Menu newInstance) throws DAOException {
-        return null;
+        throw new DAOException(new OperationNotSupportedException("not implemented"));
     }
 
     public Menu read(String id) throws DAOException {
@@ -52,11 +53,11 @@ public class SAXDAO implements GenericDAO<Menu, String> {
     }
 
     public void update(Menu transientObject) throws DAOException {
-
+        throw new DAOException(new OperationNotSupportedException("not implemented"));
     }
 
-    public void delete(Menu persistentObject) {
-
+    public void delete(Menu persistentObject) throws DAOException {
+        throw new DAOException(new OperationNotSupportedException("not implemented"));
     }
 
     public List find(String fieldName, String value, boolean isPureSearch) {

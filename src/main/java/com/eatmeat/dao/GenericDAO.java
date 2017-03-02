@@ -22,5 +22,5 @@ public interface GenericDAO <T extends Serializable, PK> extends Findable {
     void update(T transientObject) throws DAOException;
 
     /** Удалить объект из базы данных */
-    void delete(T persistentObject);
+    void delete(T persistentObject) throws DAOException;
 }

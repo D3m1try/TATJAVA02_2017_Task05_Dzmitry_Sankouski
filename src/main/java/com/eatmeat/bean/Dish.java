@@ -25,7 +25,36 @@ public class Dish implements Serializable {
 
     }
 
-    //TODO equals & hashcode
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Dish dish = (Dish) o;
+
+        if (NAME_VALUE_DELIM != dish.NAME_VALUE_DELIM) return false;
+        if (FIELD_DELIM != dish.FIELD_DELIM) return false;
+        if (photo != null ? !photo.equals(dish.photo) : dish.photo != null) return false;
+        if (name != null ? !name.equals(dish.name) : dish.name != null) return false;
+        if (decsription != null ? !decsription.equals(dish.decsription) : dish.decsription != null) return false;
+        if (price != null ? !price.equals(dish.price) : dish.price != null) return false;
+        if (portion != null ? !portion.equals(dish.portion) : dish.portion != null) return false;
+        return morphs != null ? morphs.equals(dish.morphs) : dish.morphs == null;
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = photo != null ? photo.hashCode() : 0;
+        result = 31 * result + (name != null ? name.hashCode() : 0);
+        result = 31 * result + (decsription != null ? decsription.hashCode() : 0);
+        result = 31 * result + (price != null ? price.hashCode() : 0);
+        result = 31 * result + (portion != null ? portion.hashCode() : 0);
+        result = 31 * result + (morphs != null ? morphs.hashCode() : 0);
+        result = 31 * result + (int) NAME_VALUE_DELIM;
+        result = 31 * result + (int) FIELD_DELIM;
+        return result;
+    }
 
     public String toString(){
         StringBuilder result = new StringBuilder();

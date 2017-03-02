@@ -13,6 +13,7 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 import javax.measure.unit.SI;
+import javax.naming.OperationNotSupportedException;
 import java.io.IOException;
 import java.net.URI;
 import java.util.ArrayList;
@@ -30,7 +31,7 @@ public class DOMDAO implements GenericDAO<Menu, String> {
     private String DOCUMENT = "C:\\Users\\Dzmitry_Sankouski\\IdeaProjects\\TATJAVA02_2017_Task05_Dzmitry_Sankouski\\src\\main\\resources\\menu.xml";
 
     public String create(Menu newInstance) throws DAOException {
-        return null;
+        throw new DAOException(new OperationNotSupportedException("not implemented"));
     }
 
     public Menu read(String id) throws DAOException {
@@ -126,15 +127,15 @@ public class DOMDAO implements GenericDAO<Menu, String> {
     }
 
     public void update(Menu transientObject) throws DAOException {
-
+        throw new DAOException(new OperationNotSupportedException("not implemented"));
     }
 
-    public void delete(Menu persistentObject) {
-
+    public void delete(Menu persistentObject) throws DAOException {
+        throw new DAOException(new OperationNotSupportedException("not implemented"));
     }
 
 
-    public List find(String fieldName, String value, boolean isPureSearch) {
-        return null;
+    public List<Dish> find(String fieldName, String value, boolean isPureSearch) throws DAOException {
+        throw new DAOException(new OperationNotSupportedException("not implemented"));
     }
 }

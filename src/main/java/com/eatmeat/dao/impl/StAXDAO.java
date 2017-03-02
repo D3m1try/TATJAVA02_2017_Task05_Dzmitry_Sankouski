@@ -8,6 +8,7 @@ import com.eatmeat.dao.exception.DAOException;
 import com.eatmeat.dao.util.MenuTagName;
 
 import javax.measure.unit.SI;
+import javax.naming.OperationNotSupportedException;
 import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLStreamConstants;
 import javax.xml.stream.XMLStreamException;
@@ -28,7 +29,7 @@ import static com.eatmeat.dao.util.Util.tryParse;
 public class StAXDAO implements GenericDAO<Menu, String> {
 
     public String create(Menu newInstance) throws DAOException {
-        return null;
+        throw new DAOException(new OperationNotSupportedException("not implemented"));
     }
 
     public Menu read(String id) throws DAOException {
@@ -181,11 +182,11 @@ public class StAXDAO implements GenericDAO<Menu, String> {
     }
 
     public void update(Menu transientObject) throws DAOException {
-
+        throw new DAOException(new OperationNotSupportedException("not implemented"));
     }
 
-    public void delete(Menu persistentObject) {
-
+    public void delete(Menu persistentObject) throws DAOException {
+        throw new DAOException(new OperationNotSupportedException("not implemented"));
     }
 
     public List find(String fieldName, String value, boolean isPureSearch) {

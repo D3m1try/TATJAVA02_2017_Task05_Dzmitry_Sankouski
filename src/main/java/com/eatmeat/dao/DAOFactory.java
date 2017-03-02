@@ -26,7 +26,7 @@ public class DAOFactory {
     }
 
     public GenericDAO<Menu, String> getDAO(){
-        return stax;
+        return dom;
     }
 
 }
